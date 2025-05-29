@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+  temp_sensor:
+    image: luyda/sensor-sim
+    environment:
+      - SIM_HOST=192.168.0.101
+      - SIM_NAME=TEMP1
+      - SIM_PERIOD=2
+      - SIM_TYPE=temperature
+  pressure_sensor:
+    image: luyda/sensor-sim
+    environment:
+      - SIM_HOST=192.168.0.101
+      - SIM_NAME=PRESS1
+      - SIM_PERIOD=2
+      - SIM_TYPE=pressure
+  current_sensor:
+    image: luyda/sensor-sim
+    environment:
+      - SIM_HOST=192.168.0.101
+      - SIM_NAME=CURRENT1
+      - SIM_PERIOD=2
+      - SIM_TYPE=current
+  co_sensor:
+    image: polinazhirakova/data-simulator
+    environment:
+      - SIM_HOST=192.168.0.101
+      - SIM_NAME=CO1
+      - SIM_PERIOD=2
+      - SIM_TYPE=carbon_oxid
